@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  height: 80px;
+  background-color: blue;
+  color: white;
+  display: flex;
+}
+
+header > *,
+footer > * {
+  margin: auto;
+}
+
+main {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main > * {
+  margin: auto;
+}
+
