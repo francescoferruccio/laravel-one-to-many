@@ -32,4 +32,12 @@ class TaskController extends Controller
 
     return redirect() -> route('home');
   }
+
+  public function delete($id) {
+    $task = Task::findOrFail($id);
+
+    $task -> delete();
+
+    return redirect() -> route('home');
+  }
 }

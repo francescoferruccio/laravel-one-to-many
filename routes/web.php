@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TaskController@index')->name('home');
 Route::get('/edit_task/{id}', 'TaskController@edit')->name('edit_task');
 Route::post('/update/{id}', 'TaskController@update')->name('update_task');
+Route::get('/delete/{id}', 'TaskController@delete')->name('delete_task');

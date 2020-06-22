@@ -11,7 +11,8 @@
         DEADLINE: {{ $task['deadline'] }} <br>
         EMPLOYEE: {{ $task -> employee -> firstname }}
         {{ $task -> employee -> lastname }} <br> <br>
-        <a href="{{ route('edit_task', $task['id']) }}">EDIT TASK</a> <br> <br>
+        <a href="{{ route('edit_task', $task['id']) }}">EDIT TASK</a> <br>
+        <a href="{{ route('delete_task', $task['id']) }}">DELETE TASK</a> <br> <br>
       </li>
     @endforeach
   </ul>
