@@ -3,6 +3,8 @@
 @section('content')
   <h1>Tasks</h1>
 
+  <h3><a href="{{ route('create_task') }}">CREATE NEW TASK</a></h3>
+
   <ul>
     @foreach ($tasks as $task)
       <li>

@@ -18,7 +18,9 @@
         @if ($task['employee_id'] == $employee['id'])
           selected
         @endif
-        >{{ $employee['firstname'] }} {{ $employee['lastname'] }}</option>
+        >
+        {{ $employee['firstname'] }} {{ $employee['lastname'] }}
+      </option>
       @endforeach
     </select> <br>
 

@@ -40,4 +40,30 @@ class TaskController extends Controller
 
     return redirect() -> route('home');
   }
+
+  public function create() {
+    $employees = Employee::all();
+
+    return view('create_task', compact('employees'));
+  }
+
+  public function store(Request $request) {
+    $validatedData = $request -> validate([
+      'name' => 'required',
+      'description' => 'required',
+      'deadline' => 'required',
+      'employee_id' => 'required'
+    ]);
+
+    $task = new Task;
+
+    $task['name'] = $validatedData['name'];
+    $task['description'] = $validatedData['description'];
+    $task['deadline'] = $validatedData['deadline'];
+    $task['employee_id'] = $validatedData['employee_id'];
+
+    $task -> save();
+
+    return redirect() -> route('home');
+  }
 }
