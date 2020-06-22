@@ -24,4 +24,10 @@ main {
   & > * {
     margin: auto;
   }
+
+  .success {
+    color: green;
+    margin: 20px;
+    text-align: center;
+  }
 }

@@ -27,3 +27,9 @@ main > * {
   margin: auto;
 }
 
+main .success {
+  color: green;
+  margin: 20px;
+  text-align: center;
+}
+

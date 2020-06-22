@@ -1,6 +1,16 @@
 @extends('layouts.main_layout')
 
 @section('content')
+  @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+  @endif
+
   <form action="{{ route('update_task', $task['id']) }}" method="post">
     @csrf
     @method('POST')
@@ -10,7 +20,7 @@
     <label for="description">DESCRIPTION</label>
     <input type="text" name="description" value="{{ $task['description'] }}"> <br>
     <label for="deadline">DEADLINE</label>
-    <input type="text" name="deadline" value="{{ $task['deadline'] }}"> <br>
+    <input type="date" name="deadline" value="{{ $task['deadline'] }}"> <br>
     <label for="employee_id">EMPLOYEE</label>
     <select name="employee_id">
       @foreach ($employees as $employee)

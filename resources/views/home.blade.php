@@ -1,6 +1,11 @@
 @extends('layouts.main_layout')
 
 @section('content')
+  @if (session('status'))
+      <div class='success'>
+          <h1>{{ session('status') }}</h1>
+      </div>
+  @endif
   <h1>Tasks</h1>
 
   <h3><a href="{{ route('create_task') }}">CREATE NEW TASK</a></h3>

@@ -24,13 +24,13 @@ class TaskController extends Controller
     $validatedData = $request -> validate([
       'name' => 'required',
       'description' => 'required',
-      'deadline' => 'required',
+      'deadline' => 'required|date',
       'employee_id' => 'required'
     ]);
 
     Task::whereId($id) -> update($validatedData);
 
-    return redirect() -> route('home');
+    return redirect() -> route('home') -> with('status', 'Task updated!');;
   }
 
   public function delete($id) {
@@ -51,7 +51,7 @@ class TaskController extends Controller
     $validatedData = $request -> validate([
       'name' => 'required',
       'description' => 'required',
-      'deadline' => 'required',
+      'deadline' => 'required|date',
       'employee_id' => 'required'
     ]);
 
@@ -64,6 +64,6 @@ class TaskController extends Controller
 
     $task -> save();
 
-    return redirect() -> route('home');
+    return redirect() -> route('home') -> with('status', 'Task created!');
   }
 }
