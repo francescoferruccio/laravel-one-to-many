@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('content')
-  <h1>Employees</h1>
+  <h1>Tasks</h1>
 
   <ul>
     @foreach ($tasks as $task)
