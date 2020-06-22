@@ -25,9 +25,17 @@ main {
     margin: auto;
   }
 
-  .success {
-    color: green;
+  .success,
+  .error {
     margin: 20px;
     text-align: center;
+  }
+
+  .success {
+    color: green;
+  }
+
+  .error {
+    color: red;
   }
 }

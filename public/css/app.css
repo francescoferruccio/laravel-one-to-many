@@ -27,9 +27,17 @@ main > * {
   margin: auto;
 }
 
-main .success {
-  color: green;
+main .success,
+main .error {
   margin: 20px;
   text-align: center;
+}
+
+main .success {
+  color: green;
+}
+
+main .error {
+  color: red;
 }
 

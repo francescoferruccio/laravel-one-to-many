@@ -38,7 +38,7 @@ class TaskController extends Controller
 
     $task -> delete();
 
-    return redirect() -> route('home');
+    return redirect() -> route('home') -> with('status', 'Task deleted!');;
   }
 
   public function create() {

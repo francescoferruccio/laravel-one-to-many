@@ -2,7 +2,7 @@
 
 @section('content')
   @if ($errors->any())
-      <div class="alert alert-danger">
+      <div class="error">
           <ul>
               @foreach ($errors->all() as $error)
                   <li>{{ $error }}</li>
@@ -16,11 +16,11 @@
     @method('POST')
 
     <label for="name">NAME</label>
-    <input type="text" name="name" value=""> <br>
+    <input type="text" name="name" value="{{ old('name') }}"> <br>
     <label for="description">DESCRIPTION</label>
-    <input type="text" name="description" value=""> <br>
+    <input type="text" name="description" value="{{ old('description') }}"> <br>
     <label for="deadline">DEADLINE</label>
-    <input type="date" name="deadline" value=""> <br>
+    <input type="date" name="deadline" value="{{ old('deadline') }}"> <br>
     <label for="employee_id">EMPLOYEE</label>
     <select name="employee_id">
       @foreach ($employees as $employee)
