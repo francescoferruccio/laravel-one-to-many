@@ -14,8 +14,8 @@
       <label for="dateOfBirth">DATEOFBIRTH</label>
       <input type="date" name="dateOfBirth" value="{{ $employee['dateOfBirth'] }}"> <br>
       <label for="role">ROLE</label>
-      <input type="text" name="role" value="{{ $employee['role'] }}"> <br>
-      <label for="locations[]">LOCATIONS</label> <br>
+      <input type="text" name="role" value="{{ $employee['role'] }}"> <br><br>
+      <label for="locations[]">LOCATIONS</label> <br><br>
       @foreach ($locations as $location)
         <input type="checkbox" name="locations[]" value="{{ $location['id'] }}"
         @foreach ($employee -> locations as $empl_location)
@@ -26,7 +26,8 @@
         > {{ $location['city'] }} - {{ $location['street'] }} - {{ $location['state'] }} <br>
       @endforeach
       <br>
-      <input type="submit" name="submit" value="UPDATE">
+      <input type="submit" name="submit" value="UPDATE"> <br><br>
+      <a href="{{ route('show_empl', $employee['id']) }}">BACK</a>
     </form>
   </div>
 @endsection

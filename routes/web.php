@@ -47,5 +47,6 @@ Route::post('/store', 'TaskController@store')->name('store_task');
 Route::get('/show/{id}', 'EmployeeController@show')->name('show_empl');
 Route::get('/edit_empl/{id}', 'EmployeeController@edit')->name('edit_empl');
 Route::post('/update/{id}', 'EmployeeController@update')->name('update_empl');
+Route::get('delete_empl/{id}', 'EmployeeController@delete')->name('delete_empl');
 
 Route::get('/locations', 'LocationController@index')->name('home_loc');

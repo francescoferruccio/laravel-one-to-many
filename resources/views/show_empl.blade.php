@@ -16,5 +16,7 @@
     @endforeach
   </div>
   <a href="{{ route('edit_empl', $employee['id']) }}">EDIT EMPLOYEE</a>
+  <a href="{{ route('delete_empl', $employee['id']) }}">DELETE EMPLOYEE</a>
   <a href="{{ route('home') }}">HOME</a>
+  <a href="{{ route('home_loc') }}">LOCATIONS</a>
 @endsection

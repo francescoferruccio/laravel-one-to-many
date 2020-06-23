@@ -28,6 +28,14 @@ main > * {
   margin: auto;
 }
 
+main .home .top {
+  margin: 20px 0;
+}
+
+main .home .top h3 {
+  margin: 20px 0;
+}
+
 main .success,
 main .error {
   margin: 20px;

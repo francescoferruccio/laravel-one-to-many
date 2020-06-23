@@ -47,4 +47,12 @@ class EmployeeController extends Controller
 
     return redirect() -> route('show_empl', $id);
   }
+
+  public function delete($id) {
+    $employee = Employee::findOrFail($id);
+
+    $employee -> delete();
+
+    return redirect() -> route('home');
+  }
 }

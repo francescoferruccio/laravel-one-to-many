@@ -26,6 +26,16 @@ main {
     margin: auto;
   }
 
+  .home {
+    .top {
+      margin: 20px 0;
+
+      h3 {
+        margin: 20px 0;
+      }
+    }
+  }
+
   .success,
   .error {
     margin: 20px;
