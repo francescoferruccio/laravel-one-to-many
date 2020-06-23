@@ -30,6 +30,7 @@ class EmployeeController extends Controller
       'locations' => 'array'
     ]);
 
+    // controllo se esiste la chiave locations in $validatedData, se non esiste lo imposto ad array vuoto
     if (!array_key_exists('locations', $validatedData)) {
       $validatedData['locations'] = [];
     }
