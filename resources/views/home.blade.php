@@ -13,11 +13,13 @@
   <ul>
     @foreach ($tasks as $task)
       <li>
-        NAME: {{ $task['name'] }} <br>
+        NAME: {{ $task['name'] }}<br>
         DESCRIPTION: {{ $task['description'] }} <br>
         DEADLINE: {{ $task['deadline'] }} <br>
-        EMPLOYEE: {{ $task -> employee -> firstname }}
-        {{ $task -> employee -> lastname }} <br> <br>
+        EMPLOYEE: <a href="{{ route('show_empl', $task -> employee -> id) }}">
+          {{ $task -> employee -> firstname }}
+          {{ $task -> employee -> lastname }}
+        </a><br><br>
         <a href="{{ route('edit_task', $task['id']) }}">EDIT TASK</a> <br>
         <a href="{{ route('delete_task', $task['id']) }}">DELETE TASK</a> <br> <br>
       </li>
