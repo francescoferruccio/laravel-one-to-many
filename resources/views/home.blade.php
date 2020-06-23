@@ -6,6 +6,7 @@
           <h1>{{ session('status') }}</h1>
       </div>
   @endif
+  <a href="{{ route('home_loc') }}">VIEW LOCATIONS</a>
   <h1>Tasks</h1>
 
   <h3><a href="{{ route('create_task') }}">CREATE NEW TASK</a></h3>

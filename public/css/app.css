@@ -21,6 +21,7 @@ main {
   min-height: 50vh;
   display: flex;
   flex-direction: column;
+  padding: 20px 0;
 }
 
 main > * {
@@ -39,5 +40,14 @@ main .success {
 
 main .error {
   color: red;
+}
+
+main .locations {
+  width: 80%;
+}
+
+main .locations h1,
+main .locations h2 {
+  margin: 20px 0;
 }
 

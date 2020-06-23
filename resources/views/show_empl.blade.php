@@ -16,5 +16,5 @@
     @endforeach
   </div>
   <a href="{{ route('edit_empl', $employee['id']) }}">EDIT EMPLOYEE</a>
-  <a href="{{ route('home') }}">BACK</a>
+  <a href="{{ route('home') }}">HOME</a>
 @endsection
