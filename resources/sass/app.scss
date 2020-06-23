@@ -52,10 +52,21 @@ main {
 
   .locations {
     width: 80%;
+    margin: 20px auto;
+    background-color: lightgrey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h1,
     h2 {
       margin: 20px 0;
+    }
+
+    .locations-list {
+      margin-top: 20px;
     }
   }
 }

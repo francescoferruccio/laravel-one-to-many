@@ -52,10 +52,21 @@ main .error {
 
 main .locations {
   width: 80%;
+  margin: 20px auto;
+  background-color: lightgrey;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main .locations h1,
 main .locations h2 {
   margin: 20px 0;
+}
+
+main .locations .locations-list {
+  margin-top: 20px;
 }
 

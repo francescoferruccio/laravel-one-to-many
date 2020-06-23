@@ -50,3 +50,4 @@ Route::post('/update/{id}', 'EmployeeController@update')->name('update_empl');
 Route::get('delete_empl/{id}', 'EmployeeController@delete')->name('delete_empl');
 
 Route::get('/locations', 'LocationController@index')->name('home_loc');
+Route::get('/delete_loc/{id}', 'LocationController@delete')->name('delete_loc');

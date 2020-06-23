@@ -5,7 +5,8 @@
   @foreach ($locations as $location)
     <div class='locations'>
       <h2>{{ $location['city'] }} - {{ $location['street'] }} - {{ $location['state'] }}</h2>
-      <div>
+      <a href="{{ route('delete_loc', $location['id']) }}">DELETE LOCATION</a>
+      <div class='locations-list'>
         <ul>
           @foreach ($location -> employees as $employee)
             <li>Employee:
@@ -18,4 +19,5 @@
       </div>
     </div>
   @endforeach
+  <a href="{{ route('home') }}">HOME</a>
 @endsection

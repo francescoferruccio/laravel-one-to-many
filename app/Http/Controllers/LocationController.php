@@ -12,4 +12,12 @@ class LocationController extends Controller
 
     return view('home_loc', compact('locations'));
   }
+
+  public function delete($id) {
+    $location = Location::findOrFail($id);
+
+    $location -> delete();
+
+    return redirect() -> route('home_loc');
+  }
 }
